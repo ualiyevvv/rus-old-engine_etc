@@ -1,0 +1,37 @@
+ shiftNextLine());
+	      }
+	      // and add the remaining lines without any mapping
+	      node.add(remainingLines.splice(remainingLinesIndex).join(""));
+	    }
+
+	    // Copy sourcesContent into SourceNode
+	    aSourceMapConsumer.sources.forEach(function (sourceFile) {
+	      var content = aSourceMapConsumer.sourceContentFor(sourceFile);
+	      if (content != null) {
+	        if (aRelativePath != null) {
+	          sourceFile = util.join(aRelativePath, sourceFile);
+	        }
+	        node.setSourceContent(sourceFile, content);
+	      }
+	    });
+
+	    return node;
+
+	    function addMappingWithCode(mapping, code) {
+	      if (mapping === null || mapping.source === undefined) {
+	        node.add(code);
+	      } else {
+	        var source = aRelativePath
+	          ? util.join(aRelativePath, mapping.source)
+	          : mapping.source;
+	        node.add(new SourceNode(mapping.originalLine,
+	                                mapping.originalColumn,
+	                                source,
+	                                code,
+	                                mapping.name));
+	      }
+	    }
+	  };
+
+	/**
+	 * Add a chunk 

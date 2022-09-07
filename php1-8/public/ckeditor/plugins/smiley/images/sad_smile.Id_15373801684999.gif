@@ -1,0 +1,21 @@
+R InterfaceName_Windows_Storage_Pickers_IFolderPicker3[] = L"Windows.Storage.Pickers.IFolderPicker3";
+/* [object, uuid("673B1E29-D326-53C0-BD24-A25C714CEE36"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3 * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CStorage_CPickers_CIFolderPicker3 * This
+    );
+
+HRESULT (

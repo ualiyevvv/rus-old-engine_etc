@@ -1,0 +1,30 @@
+<div class="authorization__section restore-password">
+    <div class="container">
+        <div class="card">
+            <div class="card__title">
+                <h3>Восстановление пароля</h3>
+                <div class="card__title--line"></div>
+            </div>
+            <div class="card__content">
+                <form action="/restore" method="POST">
+                    <div class="form-group">
+                        <label for="email">Электронная почта</label>
+                        <input type="email" name="email" placeholder="example@example.com" required />
+                    </div>
+
+                    <div class="buttons__row">
+                        <div class="buttons__row--button">
+                            <button type="submit" class="button button-success">
+                                Продолжить
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="authorization__section--link">
+            Вспомнили пароль? <a href="/login">Авторизуйтесь</a>
+        </div>
+    </div>
+</div>

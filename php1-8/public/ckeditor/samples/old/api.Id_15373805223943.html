@@ -1,0 +1,212 @@
+
+
+/* this ALWAYS GENERATED file contains the definitions for the interfaces */
+
+
+ /* File created by MIDL compiler version 8.01.0622 */
+/* @@MIDL_FILE_HEADING(  ) */
+
+
+
+/* verify that the <rpcndr.h> version is high enough to compile this file*/
+#ifndef __REQUIRED_RPCNDR_H_VERSION__
+#define __REQUIRED_RPCNDR_H_VERSION__ 500
+#endif
+
+/* verify that the <rpcsal.h> version is high enough to compile this file*/
+#ifndef __REQUIRED_RPCSAL_H_VERSION__
+#define __REQUIRED_RPCSAL_H_VERSION__ 100
+#endif
+
+#include "rpc.h"
+#include "rpcndr.h"
+
+#ifndef __RPCNDR_H_VERSION__
+#error this stub requires an updated version of <rpcndr.h>
+#endif /* __RPCNDR_H_VERSION__ */
+
+#ifndef COM_NO_WINDOWS_H
+#include "windows.h"
+#include "ole2.h"
+#endif /*COM_NO_WINDOWS_H*/
+
+#ifndef __micaut_h__
+#define __micaut_h__
+
+#if defined(_MSC_VER) && (_MSC_VER >= 1020)
+#pragma once
+#endif
+
+/* Forward Declarations */ 
+
+#ifndef __IMathInputControl_FWD_DEFINED__
+#define __IMathInputControl_FWD_DEFINED__
+typedef interface IMathInputControl IMathInputControl;
+
+#endif 	/* __IMathInputControl_FWD_DEFINED__ */
+
+
+#ifndef ___IMathInputControlEvents_FWD_DEFINED__
+#define ___IMathInputControlEvents_FWD_DEFINED__
+typedef interface _IMathInputControlEvents _IMathInputControlEvents;
+
+#endif 	/* ___IMathInputControlEvents_FWD_DEFINED__ */
+
+
+#ifndef __MathInputControl_FWD_DEFINED__
+#define __MathInputControl_FWD_DEFINED__
+
+#ifdef __cplusplus
+typedef class MathInputControl MathInputControl;
+#else
+typedef struct MathInputControl MathInputControl;
+#endif /* __cplusplus */
+
+#endif 	/* __MathInputControl_FWD_DEFINED__ */
+
+
+/* header files for imported files */
+#include "oaidl.h"
+#include "ocidl.h"
+#include "msinkaut.h"
+
+#ifdef __cplusplus
+extern "C"{
+#endif 
+
+
+/* interface __MIDL_itf_micaut_0000_0000 */
+/* [local] */ 
+
+#include <winapifamily.h>
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+typedef /* [public][uuid] */  DECLSPEC_UUID("D7803AF6-B018-4a42-AE48-B2D2319BCB05") 
+enum __MIDL___MIDL_itf_micaut_0000_0000_0001
+    {
+        MICUIELEMENT_BUTTON_WRITE	= ( 1 << 0 ) ,
+        MICUIELEMENT_BUTTON_ERASE	= ( 1 << 1 ) ,
+        MICUIELEMENT_BUTTON_CORRECT	= ( 1 << 2 ) ,
+        MICUIELEMENT_BUTTON_CLEAR	= ( 1 << 3 ) ,
+        MICUIELEMENT_BUTTON_UNDO	= ( 1 << 4 ) ,
+        MICUIELEMENT_BUTTON_REDO	= ( 1 << 5 ) ,
+        MICUIELEMENT_BUTTON_INSERT	= ( 1 << 6 ) ,
+        MICUIELEMENT_BUTTON_CANCEL	= ( 1 << 7 ) ,
+        MICUIELEMENT_INKPANEL_BACKGROUND	= ( 1 << 8 ) ,
+        MICUIELEMENT_RESULTPANEL_BACKGROUND	= ( 1 << 9 ) 
+    } 	MICUIELEMENT;
+
+typedef /* [public][uuid] */  DECLSPEC_UUID("117F1516-9539-4e26-9CCF-CD7511AE9BF1") 
+enum __MIDL___MIDL_itf_micaut_0000_0000_0002
+    {
+        MICUIELEMENTSTATE_NORMAL	= 1,
+        MICUIELEMENTSTATE_HOT	= ( MICUIELEMENTSTATE_NORMAL + 1 ) ,
+        MICUIELEMENTSTATE_PRESSED	= ( MICUIELEMENTSTATE_HOT + 1 ) ,
+        MICUIELEMENTSTATE_DISABLED	= ( MICUIELEMENTSTATE_PRESSED + 1 ) 
+    } 	MICUIELEMENTSTATE;
+
+typedef /* [hidden] */ 
+enum DISPID_MathInputControlEvents
+    {
+        DISPID_MICInsert	= 0,
+        DISPID_MICClose	= ( DISPID_MICInsert + 1 ) ,
+        DISPID_MICPaint	= ( DISPID_MICClose + 1 ) ,
+        DISPID_MICClear	= ( DISPID_MICPaint + 1 ) 
+    } 	DISPID_MathInputControlEvents;
+
+
+
+extern RPC_IF_HANDLE __MIDL_itf_micaut_0000_0000_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_micaut_0000_0000_v0_0_s_ifspec;
+
+#ifndef __IMathInputControl_INTERFACE_DEFINED__
+#define __IMathInputControl_INTERFACE_DEFINED__
+
+/* interface IMathInputControl */
+/* [unique][helpstring][nonextensible][dual][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IMathInputControl;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("EBA615AA-FAC6-4738-BA5F-FF09E9FE473E")
+    IMathInputControl : public IDispatch
+    {
+    public:
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Show( void) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Hide( void) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE IsVisible( 
+            /* [out] */ __RPC__out VARIANT_BOOL *pvbShown) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetPosition( 
+            /* [out] */ __RPC__out LONG *Left,
+            /* [out] */ __RPC__out LONG *Top,
+            /* [out] */ __RPC__out LONG *Right,
+            /* [out] */ __RPC__out LONG *Bottom) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetPosition( 
+            /* [in] */ LONG Left,
+            /* [in] */ LONG Top,
+            /* [in] */ LONG Right,
+            /* [in] */ LONG Bottom) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Clear( void) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetCustomPaint( 
+            /* [in] */ LONG Element,
+            /* [in] */ VARIANT_BOOL Paint) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetCaptionText( 
+            /* [in] */ __RPC__in BSTR CaptionText) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE LoadInk( 
+            /* [in] */ __RPC__in_opt IInkDisp *Ink) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetOwnerWindow( 
+            /* [in] */ LONG_PTR OwnerWindow) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE EnableExtendedButtons( 
+            /* [in] */ VARIANT_BOOL Extended) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetPreviewHeight( 
+            /* [out] */ __RPC__out LONG *Height) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetPreviewHeight( 
+            /* [in] */ LONG Height) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE EnableAutoGrow( 
+            /* [in] */ VARIANT_BOOL AutoGrow) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE AddFunctionName( 
+            /* [in] */ __RPC__in BSTR FunctionName) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE RemoveFunctionName( 
+            /* [in] */ __RPC__in BSTR FunctionName) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetHoverIcon( 
+            /* [out] */ __RPC__deref_out_opt IPictureDisp **HoverImage) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IMathInputControlVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IMathInputControl * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IMathInputControl * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IMathInputControl * This);
+       

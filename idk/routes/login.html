@@ -1,0 +1,40 @@
+<div class="authorization__section">
+    <div class="container">
+        <div class="card">
+            <div class="card__title">
+                <h3>Авторизация</h3>
+                <div class="card__title--line"></div>
+            </div>
+            <div class="card__content">
+                <form action="/login" method="POST">
+                    <div class="form-group">
+                        <label for="email">Электронная почта</label>
+                        <input type="email" name="email" placeholder="example@example.com" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" placeholder="$123$" required />
+                    </div>
+
+                    <div class="buttons__row">
+                        <div class="buttons__row--button">
+                            <button type="submit" class="button button-success">
+                                Авторизация
+                            </button>
+                        </div>
+                        <div class="buttons__row--button">
+                            <a href="/restore" class="button button-default">
+                                Восстановление пароля
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="authorization__section--link">
+            Ещё нет аккаунта? <a href="/register">Зарегистрируйтесь</a>
+        </div>
+    </div>
+</div>

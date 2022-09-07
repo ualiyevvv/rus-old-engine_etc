@@ -1,0 +1,38 @@
+/number/is-nan": [
+    "es.number.is-nan"
+  ],
+  "core-js/features/number/is-safe-integer": [
+    "es.number.is-safe-integer"
+  ],
+  "core-js/features/number/max-safe-integer": [
+    "es.number.max-safe-integer"
+  ],
+  "core-js/features/number/min-safe-integer": [
+    "es.number.min-safe-integer"
+  ],
+  "core-js/features/number/parse-float": [
+    "es.number.parse-float"
+  ],
+  "core-js/features/number/parse-int": [
+    "es.number.parse-int"
+  ],
+  "core-js/features/number/range": [
+    "esnext.number.range"
+  ],
+  "core-js/features/number/to-fixed": [
+    "es.number.to-fixed"
+  ],
+  "core-js/features/number/to-precision": [
+    "es.number.to-precision"
+  ],
+  "core-js/features/number/virtual": [
+    "es.number.to-fixed",
+    "es.number.to-precision"
+  ],
+  "core-js/features/number/virtual/to-fixed": [
+    "es.number.to-fixed"
+  ],
+  "core-js/features/number/virtual/to-precision": [
+    "es.number.to-precision"
+  ],
+  "core-js/features/object": 

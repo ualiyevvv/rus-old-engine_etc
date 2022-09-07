@@ -1,0 +1,50 @@
+"use strict";
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _declaration = _interopRequireDefault(require("./declaration"));
+
+var _tokenize = _interopRequireDefault(require("./tokenize"));
+
+var _comment = _interopRequireDefault(require("./comment"));
+
+var _atRule = _interopRequireDefault(require("./at-rule"));
+
+var _root = _interopRequireDefault(require("./root"));
+
+var _rule = _interopRequireDefault(require("./rule"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Parser = /*#__PURE__*/function () {
+  function Parser(input) {
+    this.input = input;
+    this.root = new _root.default();
+    this.current = this.root;
+    this.spaces = '';
+    this.semicolon = false;
+    this.createTokenizer();
+    this.root.source = {
+      input: input,
+      start: {
+        line: 1,
+        column: 1
+      }
+    };
+  }
+
+  var _proto = Parser.prototype;
+
+  _proto.createTokenizer = function createTokenizer() {
+    this.tokenizer = (0, _tokenize.default)(this.input);
+  };
+
+  _proto.parse = function parse() {
+    var token;
+
+    while (!this.tokenizer.endOfFile()) {
+      token = this.tokenizer.nextToken();
+
+      switch (token[0]) {
+        case 'spac

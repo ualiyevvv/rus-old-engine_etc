@@ -1,0 +1,22 @@
+mplexType>
+    </xs:element>
+    <xs:element name="ResolveManifestFiles" substitutionGroup="msb:Task">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="msb:TaskType">
+                    <xs:attribute name="DeploymentManifestEntryPoint" />
+                    <xs:attribute name="EntryPoint" />
+                    <xs:attribute name="ExtraFiles" />
+                    <xs:attribute name="Files" />
+                    <xs:attribute name="ManagedAssemblies" />
+                    <xs:attribute name="NativeAssemblies" />
+                    <xs:attribute name="OutputAssemblies" />
+                    <xs:attribute name="OutputDeploymentManifestEntryPoint" />
+                    <xs:attribute name="OutputEntryPoint" />
+                    <xs:attribute name="OutputFiles" />
+                    <xs:attribute name="PublishFiles" />
+                    <xs:attribute name="SatelliteAssemblies" />
+                    <xs:attribute name="SigningManifests" type="msb:boolean" />
+                    <xs:attribute name="TargetCulture" />
+                    <xs:attribute name="TargetFrameworkVersion" />
+                </xs:extension>
